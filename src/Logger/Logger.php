@@ -18,10 +18,7 @@ class Logger
     public function log(int $logLevel, string $message)
     {
         foreach ($this->handlers as $handler) {
-            if (count($handler->getLevels()) === 0) {
-                $handler->log($logLevel, $message);
-            }
-            if (in_array($logLevel, $handler->getLevels())) {
+            if (count($handler->getLevels()) === 0 || in_array($logLevel, $handler->getLevels())) {
                 $handler->log($logLevel, $message);
             }
         }
