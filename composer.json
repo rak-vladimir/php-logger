@@ -1,0 +1,13 @@
+{
+    "name": "logger/logger",
+    "type": "package",
+    "require": {
+        "php": "^7.4 | ^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Logger\\": "src/Logger"
+        }
+    },
+    "minimum-stability": "dev"
+}
